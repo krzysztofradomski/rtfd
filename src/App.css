@@ -1,6 +1,13 @@
 .App {
-  text-align: center;
   overflow: hidden;
+  background-color: white;
+  background-image: linear-gradient(
+    to right, 
+    black, 
+    white 5%, 
+    white 95%, 
+    black
+  );
 }
 
 .App-header {
@@ -15,17 +22,15 @@
 }
 
 .App-main {
-  width: 100vw;
+  width: calc(100vw - 200px);
+  margin: 0 auto;
   min-height: 2500px;
 }
 
 .App-container {
-  width: calc(100vw - 200px);
   background-color: blueviolet;
   height: 300px;
-  margin: 0 auto;
 }
-
 
 .App-footer {
   position: static;
@@ -36,6 +41,16 @@
   margin: 0 auto;
   background-color: green;
   text-align: center;
+}
+
+.App-employees {
+  margin-top: 25px;
+}
+
+
+/* FIXME: impossible to match previous siblings in CSS (yet), need to do it in JS */
+.App-employees tbody tr:hover {
+  background-color: red;
 }
 
 .flexed {
@@ -50,8 +65,10 @@
   height: 200px;
   transition: transform 2s ease;
   transform: translateX(0px);
+  cursor: pointer;
 }
 
 .aside:hover {
   transform: translateX(calc(50vw - 200px));
 }
+
